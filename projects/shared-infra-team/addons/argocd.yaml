@@ -8,7 +8,7 @@ spec:
     artifact:
       catalog: default-helm
       chartName: argo-cd
-      chartVersion: 5.38.0
+      chartVersion: 5.38.1
       valuesRef:
         repository: demo-apps
         revision: main
@@ -21,4 +21,4 @@ spec:
     type: Helm
   namespace: argocd
   sharing: {}
-  version: 5.38.0
+  version: 5.38.1
