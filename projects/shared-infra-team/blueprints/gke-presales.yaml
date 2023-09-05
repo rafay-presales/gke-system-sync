@@ -20,6 +20,14 @@ spec:
     enableCsiSecretStore: true
     enableMonitoring: true
     monitoring:
+      helmExporter:
+        customizationEnabled: true
+        discovery: {}
+      metricsServer:
+        customizationEnabled: true
+      nodeExporter:
+        customizationEnabled: true
+        discovery: {}
       prometheusAdapter:
         customizationEnabled: true
   drift:
@@ -30,4 +38,4 @@ spec:
     fleetValues:
     - gke-presales
   type: custom
-  version: v3
+  version: v4
