@@ -20,6 +20,9 @@ spec:
       - name: Agent
       - name: Override
       - name: Workload
+      - name: WorkloadTemplate
+      - name: NamespaceNetworkPolicyRule
+      - name: NamespaceNetworkPolicy
       sourceAsDestination: true
       sourceRepo:
         repository: gke-system-sync

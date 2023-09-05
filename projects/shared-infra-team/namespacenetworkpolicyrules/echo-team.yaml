@@ -1,0 +1,15 @@
+apiVersion: security.k8smgmt.io/v3
+kind: NamespaceNetworkPolicyRule
+metadata:
+  name: echo-team
+  project: shared-infra-team
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: echo/network-policy/echo-team.yaml
+      repository: demo-apps
+      revision: main
+    options: {}
+    type: Yaml
+  version: v1

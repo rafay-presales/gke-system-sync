@@ -1,0 +1,14 @@
+apiVersion: security.k8smgmt.io/v3
+kind: NamespaceNetworkPolicy
+metadata:
+  name: echo-team
+  project: shared-infra-team
+spec:
+  rules:
+  - name: echo-team
+    version: v1
+  sharing:
+    enabled: true
+    projects:
+    - name: echo-team
+  version: v1
