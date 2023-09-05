@@ -1,0 +1,10 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: argocd-echo-app-dev
+  project: shared-infra-team
+spec:
+  artifact:
+    artifact: {}
+    type: Yaml
+  namespace: argocd
