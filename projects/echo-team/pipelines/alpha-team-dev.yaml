@@ -1,0 +1,22 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: alpha-team-dev
+  project: echo-team
+spec:
+  stages:
+  - config:
+      useRevisionFromWebhookTriggerEvent: true
+      workload: alpha-team-dev
+    name: deploy-alpha-dev
+    type: DeployWorkload
+  triggers:
+  - config:
+      repo:
+        paths:
+        - name: alpha.yaml
+        provider: Github
+        repository: alpha-team
+        revision: dev
+    name: alpha-dev-trigger
+    type: Webhook

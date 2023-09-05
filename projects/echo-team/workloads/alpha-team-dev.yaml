@@ -1,0 +1,16 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: alpha-team-dev
+  project: echo-team
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: alpha.yaml
+      repository: alpha-team
+      revision: dev
+    type: Yaml
+  namespace: alpha-team-dev
+  placement:
+    selector: rafay.dev/clusterName=shared-infra-team-gke-73-demo

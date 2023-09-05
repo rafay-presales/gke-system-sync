@@ -5,6 +5,10 @@ metadata:
   project: shared-infra-team
 spec:
   active: true
+  sharing:
+    enabled: true
+    projects:
+    - name: echo-team
   stages:
   - config:
       destinationRepo: {}

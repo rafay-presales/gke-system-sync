@@ -1,0 +1,21 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  annotations:
+    rafay.dev/description: ""
+  name: echo-team-stage
+  project: echo-team
+spec:
+  limitRange:
+    container: {}
+    pod: {}
+  namespaceMeshPolicyParams: {}
+  networkPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: shared-infra-team-gke-73-demo
+  resourceQuotas:
+    cpuLimits: 4000m
+    memoryLimits: 8000Mi
+    pods: "10"

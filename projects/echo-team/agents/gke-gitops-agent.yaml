@@ -1,0 +1,11 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Agent
+metadata:
+  name: gke-gitops-agent
+  project: echo-team
+spec:
+  active: true
+  cluster:
+    name: shared-infra-team-gke-68-demo
+  type: Cluster
+  version: r1.28.0
