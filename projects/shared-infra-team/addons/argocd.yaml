@@ -9,6 +9,16 @@ spec:
       catalog: default-helm
       chartName: argo-cd
       chartVersion: 5.38.0
+      valuesRef:
+        repository: demo-apps
+        revision: main
+        valuesPaths:
+        - name: argo-cd/values.yaml
+    options:
+      maxHistory: 10
+      timeout: 5m0s
+      wait: true
     type: Helm
   namespace: argocd
   sharing: {}
+  version: 5.38.0
