@@ -1,0 +1,6 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: terraform
+  project: shared-infra-team
+spec: {}
