@@ -10,10 +10,18 @@ spec:
   customAddons:
   - name: ingress-nginx
     version: v1
+  - dependsOn:
+    - ingress-nginx
+    name: argocd
+    version: 5.38.0
   defaultAddons:
     csiSecretStoreConfig:
       providers: {}
     enableCsiSecretStore: true
+    enableMonitoring: true
+    monitoring:
+      prometheusAdapter:
+        enabled: true
   drift:
     action: Notify
     enabled: true
@@ -22,4 +30,4 @@ spec:
     fleetValues:
     - gke-presales
   type: custom
-  version: v1
+  version: v2
