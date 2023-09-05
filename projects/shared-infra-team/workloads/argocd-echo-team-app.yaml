@@ -5,6 +5,10 @@ metadata:
   project: shared-infra-team
 spec:
   artifact:
-    artifact: {}
+    artifact:
+      paths:
+      - name: echo/argocd/echo-team-app.yaml
+      repository: demo-apps
+      revision: main
     type: Yaml
   namespace: argocd
