@@ -9,7 +9,7 @@ metadata:
 spec:
   blueprintConfig:
     name: eks-presales
-    version: v1
+    version: v2
   cloudCredentials: aws-demo-credentials
   config:
     addons:
