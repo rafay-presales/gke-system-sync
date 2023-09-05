@@ -38,4 +38,4 @@ spec:
     fleetValues:
     - gke-presales
   type: custom
-  version: v4
+  version: v5
