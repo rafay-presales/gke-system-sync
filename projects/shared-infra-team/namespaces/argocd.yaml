@@ -1,0 +1,9 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  annotations:
+    rafay.dev/description: For ArgoCD
+  description: For ArgoCD
+  name: argocd
+  project: shared-infra-team
+spec: {}

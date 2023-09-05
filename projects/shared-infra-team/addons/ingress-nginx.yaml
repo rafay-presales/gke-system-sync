@@ -1,0 +1,15 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: ingress-nginx
+  project: shared-infra-team
+spec:
+  artifact:
+    artifact:
+      catalog: default-helm
+      chartName: ingress-nginx
+      chartVersion: 4.7.0
+    type: Helm
+  namespace: ingress-nginx
+  sharing: {}
+  version: v1

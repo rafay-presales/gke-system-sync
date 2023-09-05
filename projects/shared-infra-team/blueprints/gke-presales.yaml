@@ -1,0 +1,25 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: gke-presales
+  project: shared-infra-team
+spec:
+  base:
+    name: minimal
+    version: 1.27.0
+  customAddons:
+  - name: ingress-nginx
+    version: v1
+  defaultAddons:
+    csiSecretStoreConfig:
+      providers: {}
+    enableCsiSecretStore: true
+  drift:
+    action: Notify
+    enabled: true
+  placement:
+    autoPublish: true
+    fleetValues:
+    - gke-presales
+  type: custom
+  version: v1

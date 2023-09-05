@@ -1,0 +1,18 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  annotations:
+    rafay.dev/description: Repo for two-way system sync.
+  description: Repo for two-way system sync.
+  name: gke-system-sync
+  project: shared-infra-team
+spec:
+  agents:
+  - name: gke-system-sync
+  credentials:
+    password: sealed://credentials.password
+    username: kmadel
+  endpoint: https://github.com/rafay-presales/gke-system-sync.git
+  secret:
+    name: file://artifacts/gke-system-sync/sealed-secret.yaml
+  type: Git

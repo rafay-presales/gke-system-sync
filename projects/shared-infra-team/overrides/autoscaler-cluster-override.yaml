@@ -1,0 +1,16 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Override
+metadata:
+  labels:
+    rafay.dev/overrideScope: clusterLabels
+    rafay.dev/overrideType: valuesFile
+  name: autoscaler-cluster-override
+  project: shared-infra-team
+spec:
+  resource:
+    selector:
+      name: autoscaler-addon
+    type: Addon
+  type: Helm
+  valuesPath:
+    name: file://autoscaler-cluster-override/autoscaler-cluster-override.yaml

@@ -1,0 +1,14 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: argocd
+  project: shared-infra-team
+spec:
+  artifact:
+    artifact:
+      catalog: default-helm
+      chartName: argo-cd
+      chartVersion: 5.38.0
+    type: Helm
+  namespace: argocd
+  sharing: {}
