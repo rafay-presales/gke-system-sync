@@ -21,7 +21,7 @@ spec:
     enableMonitoring: true
     monitoring:
       prometheusAdapter:
-        enabled: true
+        customizationEnabled: true
   drift:
     action: Notify
     enabled: true
@@ -30,4 +30,4 @@ spec:
     fleetValues:
     - gke-presales
   type: custom
-  version: v2
+  version: v3
