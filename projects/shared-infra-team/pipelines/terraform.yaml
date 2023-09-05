@@ -3,4 +3,15 @@ kind: Pipeline
 metadata:
   name: terraform
   project: shared-infra-team
-spec: {}
+spec:
+  stages:
+  - config:
+      action:
+        action: Plan
+        refresh: true
+      agents:
+      - name: gke-system-sync
+      provisioner: terra
+      type: Terraform
+    name: deploy-vm
+    type: InfraProvisioner
