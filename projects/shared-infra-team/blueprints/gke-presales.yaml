@@ -13,7 +13,7 @@ spec:
   - dependsOn:
     - ingress-nginx
     name: argocd
-    version: 5.38.0
+    version: 5.38.1
   defaultAddons:
     csiSecretStoreConfig:
       providers: {}
@@ -38,4 +38,4 @@ spec:
     fleetValues:
     - gke-presales
   type: custom
-  version: v5
+  version: v6
