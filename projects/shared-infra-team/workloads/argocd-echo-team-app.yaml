@@ -14,4 +14,4 @@ spec:
   namespace: argocd
   placement:
     selector: rafay.dev/clusterName=shared-infra-team-gke-73-demo
-  version: argocd-echo-team-app-v2-202309051318260000
+  version: argocd-echo-team-app-v4-202309051322540000
