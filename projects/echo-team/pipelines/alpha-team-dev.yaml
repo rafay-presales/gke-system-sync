@@ -4,6 +4,7 @@ metadata:
   name: alpha-team-dev
   project: echo-team
 spec:
+  active: true
   stages:
   - config:
       useRevisionFromWebhookTriggerEvent: true
