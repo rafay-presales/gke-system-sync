@@ -5,9 +5,9 @@ metadata:
   name: naas
 spec:
   clusterResourceQuota:
-    cpuLimits: 18000m
-    memoryLimits: 34000Mi
-    pods: "50"
+    cpuLimits: 36000m
+    memoryLimits: 68000Mi
+    pods: "100"
   defaultClusterNamespaceQuota:
     cpuLimits: 4000m
     memoryLimits: 8000Mi
