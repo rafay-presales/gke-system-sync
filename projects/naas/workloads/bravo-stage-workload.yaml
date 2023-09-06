@@ -1,0 +1,16 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: bravo-stage-workload
+  project: naas
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: echo.yaml
+      repository: bravo
+      revision: stage
+    type: Yaml
+  namespace: bravo-stage
+  placement:
+    selector: rafay.dev/clusterName=shared-infra-team-gke-73-demo

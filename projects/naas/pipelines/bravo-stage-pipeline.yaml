@@ -1,0 +1,23 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: bravo-stage-pipeline
+  project: naas
+spec:
+  active: true
+  stages:
+  - config:
+      useRevisionFromWebhookTriggerEvent: true
+      workload: bravo-stage-workload
+    name: deploy-echo-app
+    type: DeployWorkload
+  triggers:
+  - config:
+      repo:
+        paths:
+        - name: echo.yaml
+        provider: Github
+        repository: bravo
+        revision: stage
+    name: bravo-stage-webhook
+    type: Webhook
