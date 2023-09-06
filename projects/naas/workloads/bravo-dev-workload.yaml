@@ -14,3 +14,4 @@ spec:
   namespace: bravo-dev
   placement:
     selector: rafay.dev/clusterName=shared-infra-team-gke-73-demo
+  version: bravo-dev-workload-v2-202309062210020000
