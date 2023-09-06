@@ -1,0 +1,14 @@
+apiVersion: system.k8smgmt.io/v3
+kind: Project
+metadata:
+  description: Provides namespace as a service to development teams.
+  name: naas
+spec:
+  clusterResourceQuota:
+    cpuLimits: 18000m
+    memoryLimits: 34000Mi
+    pods: "50"
+  defaultClusterNamespaceQuota:
+    cpuLimits: 4000m
+    memoryLimits: 8000Mi
+    pods: "10"
