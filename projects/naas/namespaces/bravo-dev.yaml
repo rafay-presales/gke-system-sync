@@ -1,0 +1,28 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  labels:
+    shared-gateway-access: "true"
+  name: bravo-dev
+  project: naas
+spec:
+  limitRange:
+    container: {}
+    pod:
+      max:
+        cpu: 1m
+        memory: 2000Ki
+      min:
+        cpu: 1u
+        memory: 204799475712u
+  namespaceMeshPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: shared-infra-team-gke-73-demo
+  resourceQuotas:
+    cpuLimits: 4000m
+    memoryLimits: 8000Mi
+    pods: "20"
+    services: "10"
+    storageRequests: 100Gi
