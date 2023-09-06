@@ -9,6 +9,7 @@ spec:
     enabled: true
     projects:
     - name: echo-team
+    - name: naas
   stages:
   - config:
       destinationRepo: {}
