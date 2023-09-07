@@ -11,5 +11,8 @@ spec:
       chartVersion: 4.7.0
     type: Helm
   namespace: ingress-nginx
-  sharing: {}
+  sharing:
+    enabled: true
+    projects:
+    - name: caas
   version: v1

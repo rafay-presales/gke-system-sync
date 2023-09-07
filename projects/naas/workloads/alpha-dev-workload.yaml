@@ -14,4 +14,4 @@ spec:
   namespace: alpha-dev
   placement:
     selector: rafay.dev/clusterName=shared-infra-team-gke-73-demo
-  version: alpha-dev-workload-v1-202309071344340000
+  version: alpha-dev-workload-v2-202309071542440000
