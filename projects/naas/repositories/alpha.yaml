@@ -1,0 +1,10 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: alpha
+  project: naas
+spec:
+  agents:
+  - {}
+  endpoint: https://github.com/rafay-presales/alpha.git
+  type: Git
