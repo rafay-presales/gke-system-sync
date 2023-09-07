@@ -1,0 +1,23 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: alpha-dev-pipeline
+  project: naas
+spec:
+  active: true
+  stages:
+  - config:
+      useRevisionFromWebhookTriggerEvent: true
+      workload: alpha-dev-workload
+    name: deploy-echo-app
+    type: DeployWorkload
+  triggers:
+  - config:
+      repo:
+        paths:
+        - name: echo.yaml
+        provider: Github
+        repository: alpha
+        revision: dev
+    name: alpha-dev-webhook
+    type: Webhook

@@ -1,0 +1,17 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: alpha-dev-workload
+  project: naas
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: echo.yaml
+      repository: alpha
+      revision: dev
+    type: Yaml
+  namespace: alpha-dev
+  placement:
+    selector: rafay.dev/clusterName=shared-infra-team-gke-73-demo
+  version: alpha-dev-workload-v1-202309071344340000
