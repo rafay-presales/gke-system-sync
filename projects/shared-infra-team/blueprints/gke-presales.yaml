@@ -33,6 +33,15 @@ spec:
   drift:
     action: Notify
     enabled: true
+  driftWebhook:
+    enabled: true
+  opaPolicy:
+    opaPolicy:
+    - name: policy-privileged
+      version: version-1694184618
+    profile:
+      name: default
+      version: latest
   placement:
     autoPublish: true
     fleetValues:
@@ -42,4 +51,4 @@ spec:
     projects:
     - name: caas
   type: custom
-  version: v6
+  version: v7
