@@ -28,6 +28,9 @@ spec:
       - name: WorkloadTemplate
       - name: NamespaceNetworkPolicyRule
       - name: NamespaceNetworkPolicy
+      - name: OPAConstraint
+      - name: OPAConstraintTemplate
+      - name: OPAPolicy
       sourceAsDestination: true
       sourceRepo:
         repository: gke-system-sync
