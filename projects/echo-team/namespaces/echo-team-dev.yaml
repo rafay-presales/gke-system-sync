@@ -12,7 +12,6 @@ spec:
     container: {}
     pod: {}
   namespaceMeshPolicyParams: {}
-  networkPolicyParams: {}
   placement:
     labels:
     - key: rafay.dev/clusterName

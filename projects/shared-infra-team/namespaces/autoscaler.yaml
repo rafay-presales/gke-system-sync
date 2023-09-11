@@ -1,6 +1,8 @@
 apiVersion: infra.k8smgmt.io/v3
 kind: Namespace
 metadata:
+  annotations:
+    rafay.dev/description: ""
   name: autoscaler
   project: shared-infra-team
 spec:

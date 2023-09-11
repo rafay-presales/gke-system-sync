@@ -1,8 +1,6 @@
 apiVersion: integrations.k8smgmt.io/v3
 kind: Repository
 metadata:
-  annotations:
-    rafay.dev/description: Repo for two-way system sync.
   description: Repo for two-way system sync.
   name: gke-system-sync
   project: shared-infra-team

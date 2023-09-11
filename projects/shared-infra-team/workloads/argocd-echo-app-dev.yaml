@@ -1,0 +1,17 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: argocd-echo-app-dev
+  project: shared-infra-team
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: echo/argocd/echo-team-app-dev.yaml
+      repository: demo-apps
+      revision: main
+    type: Yaml
+  namespace: argocd
+  placement:
+    selector: rafay.dev/clusterName=shared-infra-team-gke-73-demo
+  version: argocd-echo-app-dev-v1-202309051451160000

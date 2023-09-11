@@ -12,3 +12,5 @@ spec:
     cpuLimits: 4000m
     memoryLimits: 8000Mi
     pods: "10"
+  driftWebhook:
+    enabled: true

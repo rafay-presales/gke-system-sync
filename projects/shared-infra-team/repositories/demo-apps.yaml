@@ -1,8 +1,6 @@
 apiVersion: integrations.k8smgmt.io/v3
 kind: Repository
 metadata:
-  annotations:
-    rafay.dev/description: Example apps to deploy as Rafay workloads.
   description: Example apps to deploy as Rafay workloads.
   name: demo-apps
   project: shared-infra-team

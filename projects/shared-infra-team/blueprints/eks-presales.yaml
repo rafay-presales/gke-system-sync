@@ -22,6 +22,8 @@ spec:
   drift:
     action: Deny
     enabled: true
+  driftWebhook:
+    enabled: true
   placement:
     autoPublish: true
     fleetValues:

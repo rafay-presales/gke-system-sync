@@ -6,4 +6,6 @@ metadata:
   description: For ArgoCD
   name: argocd
   project: shared-infra-team
-spec: {}
+spec:
+  namespaceMeshPolicyParams: {}
+  resourceQuotas: {}

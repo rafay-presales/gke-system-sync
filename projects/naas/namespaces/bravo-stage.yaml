@@ -1,6 +1,8 @@
 apiVersion: infra.k8smgmt.io/v3
 kind: Namespace
 metadata:
+  annotations:
+    rafay.dev/description: ""
   labels:
     shared-gateway-access: "true"
   name: bravo-stage
@@ -10,11 +12,11 @@ spec:
     container: {}
     pod:
       max:
-        cpu: 1m
-        memory: 2000Ki
+        cpu: 1u
+        memory: 1999634432u
       min:
         cpu: 1u
-        memory: 204799475712u
+        memory: 200278016u
   namespaceMeshPolicyParams: {}
   placement:
     labels:
