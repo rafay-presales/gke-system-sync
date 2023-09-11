@@ -10,5 +10,6 @@ spec:
   sharing:
     enabled: true
     projects:
+    - name: naas
     - name: echo-team
   version: v1
