@@ -1,0 +1,23 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: upstream-bp
+  project: shared-infra-team
+spec:
+  base:
+    name: base-golden-bp
+    version: v1
+  drift:
+    action: Notify
+    enabled: true
+  driftWebhook:
+    enabled: true
+  opaPolicy:
+    opaPolicy:
+    - name: policy-privileged
+      version: version-1694184618
+    profile:
+      name: default
+      version: latest
+  type: custom
+  version: v2

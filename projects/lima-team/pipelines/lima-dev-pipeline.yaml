@@ -1,0 +1,23 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: lima-dev-pipeline
+  project: lima-team
+spec:
+  active: true
+  stages:
+  - config:
+      useRevisionFromWebhookTriggerEvent: true
+      workload: lima-dev-workload
+    name: deploy-echo-app
+    type: DeployWorkload
+  triggers:
+  - config:
+      repo:
+        paths:
+        - name: echo.yaml
+        provider: Github
+        repository: lima
+        revision: dev
+    name: lima-dev-webhook
+    type: Webhook

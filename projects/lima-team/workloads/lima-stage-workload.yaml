@@ -1,0 +1,16 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: lima-stage-workload
+  project: lima-team
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: echo.yaml
+      repository: lima
+      revision: stage
+    type: Yaml
+  namespace: lima-stage
+  placement:
+    selector: rafay.dev/clusterName=shared-infra-team-gke-73-demo

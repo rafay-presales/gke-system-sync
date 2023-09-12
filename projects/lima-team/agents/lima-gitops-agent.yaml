@@ -1,0 +1,11 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Agent
+metadata:
+  name: lima-gitops-agent
+  project: lima-team
+spec:
+  active: true
+  cluster:
+    name: shared-infra-team-gke-73-demo
+  type: Cluster
+  version: r1.29.0

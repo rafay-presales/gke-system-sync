@@ -1,0 +1,10 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: lima
+  project: lima-team
+spec:
+  agents:
+  - {}
+  endpoint: https://github.com/rafay-presales/lima.git
+  type: Git

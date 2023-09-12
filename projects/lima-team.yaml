@@ -1,0 +1,8 @@
+apiVersion: system.k8smgmt.io/v3
+kind: Project
+metadata:
+  description: Provides namespace for the echo app developers to deploy.
+  name: lima-team
+spec:
+  driftWebhook:
+    enabled: true

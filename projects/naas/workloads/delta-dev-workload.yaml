@@ -1,0 +1,16 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: delta-dev-workload
+  project: naas
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: echo.yaml
+      repository: delta
+      revision: dev
+    type: Yaml
+  namespace: delta-dev
+  placement:
+    selector: rafay.dev/clusterName=shared-infra-team-gke-73-demo

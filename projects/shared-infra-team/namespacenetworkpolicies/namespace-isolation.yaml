@@ -1,0 +1,14 @@
+apiVersion: security.k8smgmt.io/v3
+kind: NamespaceNetworkPolicy
+metadata:
+  name: namespace-isolation
+  project: shared-infra-team
+spec:
+  rules:
+  - name: namespace-isolation
+    version: v1
+  sharing:
+    enabled: true
+    projects:
+    - name: naas
+  version: v1

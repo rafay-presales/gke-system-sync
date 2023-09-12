@@ -1,0 +1,17 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: lima-dev-workload
+  project: lima-team
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: echo.yaml
+      repository: lima
+      revision: dev
+    type: Yaml
+  namespace: lima-dev
+  placement:
+    selector: rafay.dev/clusterName=shared-infra-team-gke-73-demo
+  version: lima-dev-workload-v1-202309121806490000
