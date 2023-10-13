@@ -1,0 +1,11 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: whiz
+  project: shared-infra-team
+spec:
+  artifact:
+    artifact: {}
+    type: Helm
+  namespace: argocd
+  sharing: {}
